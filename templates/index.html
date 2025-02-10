@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Escape Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        header {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 20px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome, Rosie ❤️</h1>
+        <p>Unlock each section by completing the challenges!</p>
+    </header>
+
+    <section id="games">
+        <h2>🎮 Fun Games</h2>
+        <p>Play chess and test your language skills!</p>
+        <a href="{{ url_for('game1') }}">Start Game 1</a> | 
+        <a href="{{ url_for('game2') }}">Start Game 2</a>
+    </section>
+    
+
+    <section id="gallery" {% if progress < 1 %}style="display:none;"{% endif %}>
+        <h2>📸 Photo & Video Gallery</h2>
+        <p>Memories we've shared together.</p>
+        <a href="{{ url_for('gallery') }}">View Gallery</a>
+    </section>
+
+    <section id="memes" {% if progress < 2 %}style="display:none;"{% endif %}>
+        <h2>😂 Funny Memes & GIFs</h2>
+        <p>Enjoy some laughs with custom-made memes.</p>
+        <a href="{{ url_for('memes') }}">View Memes</a>
+    </section>
+
+    <section id="heart-graph" {% if progress < 2 %}style="display:none;"{% endif %}>
+        <h2>📊 Love in a Graph</h2>
+        <p>A special heart-shaped graph for us</p>
+        <a href="{{ url_for('graph') }}">See the Surprise</a>
+        <a href="{{ url_for('valentine') }}" class="valentine-link">💖 A Special Message for You 💖</a>
+
+    </section>
+    <section id="vallentine" {% if progress < 2 %}style="display:none;"{% endif %}>
+        <h2>The big reason I made this ?</h2>
+        <p>My most precious girl in the Universe</p>
+        <a href="{{ url_for('valentine') }}" class="valentine-link">💖 A Special Message for You 💖</a>
+
+    </section>
+
+
+</body>
+</html>
+

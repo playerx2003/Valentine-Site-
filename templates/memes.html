@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny Memes & GIFs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/memes.css') }}">
+</head>
+<body>
+    <h1>😂 Fun Memes & Cute GIFs</h1>
+    <p>Enjoy some laughs and love! ❤️</p>
+
+    <div class="meme-gallery">
+        <img src="{{ url_for('static', filename='memes/meme1.jpg') }}" alt="Meme 1">
+        <img src="{{ url_for('static', filename='memes/meme2.jpg') }}" alt="Meme 2">
+        <img src="{{ url_for('static', filename='memes/meme3.jpg') }}" alt="Meme 3">
+        <img src="{{ url_for('static', filename='memes/meme4.jpg') }}" alt="Meme 4">
+        <img src="{{ url_for('static', filename='memes/meme5.jpg') }}" alt="Meme 5">
+        <img src="{{ url_for('static', filename='memes/meme6.jpg') }}" alt="Meme 6">
+    </div>
+
+    <script src="{{ url_for('static', filename='js/memes.js') }}"></script>
+</body>
+</html>

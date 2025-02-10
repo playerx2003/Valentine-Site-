@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="message-container">
+        <h1>Rosie, a Special Message for You ❤️</h1>
+        <p class="poem">
+            {{ poem | safe }}
+        </p>
+        <button id="revealButton">Click to Reveal</button>
+        <div id="finalMessage" style="display: none;">
+            <h2>Will you be my Valentine? 💖</h2>
+            <button onclick="respond('yes')">Yes! 😍</button>
+            <button onclick="respond('no')">No... 😢</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("revealButton").addEventListener("click", function() {
+            document.getElementById("finalMessage").style.display = "block";
+            this.style.display = "none";
+        });
+
+        function respond(answer) {
+            if (answer === 'yes') {
+                alert("Yay! I love you, Rosie! ❤️");
+            } else {
+                alert("No worries, I still love you! 😘");
+            }
+        }
+    </script>
+</body>
+</html>

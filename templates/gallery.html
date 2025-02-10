@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo & Video Gallery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+</head>
+<body>
+    <h1>📸 Our Memories Flipbook</h1>
+    <div id="flipbook">
+        <div id="flipbook">
+            <div class="page"><img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Photo 1"></div>
+            <div class="page"><img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Photo 2"></div>
+            <div class="page"><img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Photo 3"></div>
+            <div class="page"><img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Photo 4"></div>
+            <div class="page"><img src="{{ url_for('static', filename='images/photo5.jpg') }}" alt="Photo 5"></div>
+            <div class="page"><img src="{{ url_for('static', filename='images/photo6.jpg') }}" alt="Photo 6"></div>
+            <div class="page"><video src="{{ url_for('static', filename='videos/video3.mp4') }}" controls></video></div>
+            <div class="page"><img src="{{ url_for('static', filename='images/photo7.jpg') }}" alt="Photo 7"></div>
+            <div class="page"><img src="{{ url_for('static', filename='images/photo8.jpg') }}" alt="Photo 8"></div>
+            <div class="page"><img src="{{ url_for('static', filename='images/photo9.jpg') }}" alt="Photo 9"></div>
+            <div class="page"><img src="{{ url_for('static', filename='images/photo10.jpg') }}" alt="Photo 10"></div>
+            <div class="page"><video src="{{ url_for('static', filename='videos/video1.mp4') }}" controls></video></div>
+            <div class="page"><video src="{{ url_for('static', filename='videos/video2.mp4') }}" controls></video></div>
+            <div class="page"><video src="{{ url_for('static', filename='videos/video3.mp4') }}" controls></video></div>
+        </div>
+        
+    </div>
+    <script src="{{ url_for('static', filename='js/turn.min.js') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            $("#flipbook").turn({
+                width: 600,
+                height: 400,
+                autoCenter: true
+            });
+        });
+    </script>
+</body>
+</html>

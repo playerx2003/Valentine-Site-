@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+#flipbook {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+}
+.page img, .page video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
